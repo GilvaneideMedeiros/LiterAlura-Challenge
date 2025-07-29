@@ -10,7 +10,7 @@ public class Principal {
     private Scanner leitura = new Scanner(System.in);
     private ConsumoApi consumo = new ConsumoApi();
     private ConverteDados conversor = new ConverteDados();
-    private final String ENDERECO = "https://gutendex.com/books/?search=" ";
+    private final String ENDERECO = "https://gutendex.com/books/?search=";
 
     public void exibeMenu() {
         var opcao = -1;
