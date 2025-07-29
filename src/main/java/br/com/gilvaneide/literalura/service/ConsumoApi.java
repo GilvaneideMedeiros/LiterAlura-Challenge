@@ -1,11 +1,14 @@
 package br.com.gilvaneide.literalura.service;
 
+import org.springframework.stereotype.Service;
+
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.io.IOException;
 import java.net.URI;
 
+@Service
 public class ConsumoApi {
 
         public String obterDados(String endereco) {
