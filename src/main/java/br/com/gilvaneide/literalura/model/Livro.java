@@ -2,6 +2,10 @@ package br.com.gilvaneide.literalura.model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Entity
 @Table(name = "livros")
 public class Livro {
@@ -12,11 +16,16 @@ public class Livro {
     @Column(unique = true)
     private String titulo;
 
-    @ManyToOne
-    private Autor autor;
-
     private String idioma;
     private Double numeroDownloads;
+
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+            name = "livro_autor",
+            joinColumns = @JoinColumn(name = "livro_id"),
+            inverseJoinColumns = @JoinColumn(name = "autor_id")
+    )
+    private List<Autor> autores = new ArrayList<>();
 
     // Construtor padrão
     public Livro() {}
@@ -38,12 +47,13 @@ public class Livro {
         this.titulo = titulo;
     }
 
-    public Autor getAutor() {
-        return autor;
+    public List<Autor> getAutores() {
+        return autores;
     }
 
-    public void setAutor(Autor autor) {
-        this.autor = autor;
+    public void addAutor(Autor autor) {
+        this.autores.add(autor);
+        autor.getLivros().add(this);
     }
 
     public String getIdioma() {
@@ -64,9 +74,12 @@ public class Livro {
 
     @Override
     public String toString() {
+        String nomesAutores = autores.stream()
+                .map(Autor::getNome)
+                .collect(Collectors.joining(", "));
         return "------ LIVRO ------" +
                 "\nTítulo: " + titulo +
-                "\nAutor: " + (autor != null ? autor.getNome() : "Desconhecido") +
+                "\nAutor(es): " + (nomesAutores.isEmpty() ? "Desconhecido" : nomesAutores) +
                 "\nIdioma: " + idioma +
                 "\nDownloads: " + numeroDownloads +
                 "\n-------------------";

@@ -1,7 +1,10 @@
 package br.com.gilvaneide.literalura.model;
 
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "autores")
@@ -16,8 +19,8 @@ public class Autor {
     private Integer anoNascimento;
     private Integer anoFalecimento;
 
-    @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Livro> livros;
+    @ManyToMany(mappedBy = "autores", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private List<Livro> livros = new ArrayList<>();
 
     // Construtor padrão é exigido pelo JPA
     public Autor() {}
@@ -64,8 +67,16 @@ public class Autor {
 
     @Override
     public String toString() {
-        return "Autor: " + nome +
-                " (nascimento=" + anoNascimento +
-                ", falecimento=" + anoFalecimento + ")";
+        // Mapeia a lista de livros para uma string de títulos
+        String titulosLivros = livros.stream()
+                .map(Livro::getTitulo)
+                .collect(Collectors.joining(", "));
+
+        return "------ AUTOR ------" +
+                "\nNome: " + nome +
+                "\nAno de Nascimento: " + anoNascimento +
+                "\nAno de Falecimento: " + anoFalecimento +
+                "\nLivros: [" + (titulosLivros.isEmpty() ? "Nenhum livro registrado" : titulosLivros) + "]" +
+                "\n-------------------";
     }
 }
