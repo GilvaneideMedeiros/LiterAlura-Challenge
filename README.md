@@ -11,6 +11,14 @@
 
 A aplicação permite ao usuário interagir através de um menu, realizando buscas, listando dados já registrados e consultando informações específicas, como autores vivos em um determinado ano ou livros em um idioma específico.
 
+## 🎥 Demonstração em Vídeo
+
+Para uma visão completa do funcionamento do Literalura, desde a busca na API até a consulta dos dados salvos no banco, assista à demonstração completa abaixo.
+
+[![Demonstração do Projeto Literalura em Vídeo](https://img.youtube.com/vi/569cDyqnFFI&t=5s/0.jpg)](https://www.youtube.com/watch?v=569cDyqnFFI&t=5s)
+
+*Clique na imagem para assistir ao vídeo no YouTube.*
+
 ## ✨ Funcionalidades
 
 O projeto implementa as seguintes funcionalidades:
