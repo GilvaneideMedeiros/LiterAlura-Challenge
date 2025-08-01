@@ -7,7 +7,7 @@
 
 ## 📖 Sobre o Projeto
 
-**Literalura** é uma aplicação de console desenvolvida como parte do desafio de programação da Alura. O objetivo é construir um catálogo de livros interativo que consome a API pública [Gutendex](https://gutendex.com/) para buscar e armazenar informações sobre livros e autores em um banco de dados local.
+Este desafio foi proposto pela Formação Java e Spring Framework G8 - ONE, parte do Programa ONE, uma iniciativa da Oracle Next Education em parceria com a Alura. O objetivo é construir um catálogo de livros interativo que consome a API pública [Gutendex](https://gutendex.com/) para buscar e armazenar informações sobre livros e autores em um banco de dados local.
 
 A aplicação permite ao usuário interagir através de um menu, realizando buscas, listando dados já registrados e consultando informações específicas, como autores vivos em um determinado ano ou livros em um idioma específico.
 
@@ -74,7 +74,8 @@ Siga os passos abaixo para executar o projeto em seu ambiente local.
     CREATE DATABASE literalura_db;
 
 7.  **Configure as Propriedades do Banco de Dados:**
-    Configure o acesso ao banco de dados no arquivo application.properties. Na pasta src/main/resources, crie um arquivo chamado application.properties e preencha com suas credenciais do PostgreSQL:
+    Configure o acesso ao banco de dados no arquivo application.properties. Na pasta src/main/resources, crie um 
+    arquivo chamado application.properties e preencha com suas credenciais do PostgreSQL:
     Properties # PostgreSQL application.properties
     spring.datasource.url=jdbc:postgresql://localhost:5432/literalura_db
     spring.datasource.username=SEU_USUARIO_AQUI
@@ -84,12 +85,13 @@ Siga os passos abaixo para executar o projeto em seu ambiente local.
 8.  **Execute a Aplicação:**
     Abra um terminal na raiz do projeto e execute o seguinte comando Maven:
     mvn spring-boot:run
-A aplicação será iniciada e o menu interativo aparecerá no console.
+    A aplicação será iniciada e o menu interativo aparecerá no console.
 
 # Configurações do JPA/Hibernate
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true4. Execute a aplicaçãoAbra um terminal na raiz do projeto e execute o seguinte comando Maven:Shell Scriptmvn spring-boot:runA aplicação será iniciada e o menu interativo aparecerá no console.API ExternaEste projeto utiliza a API gratuita Gutendex. Para mais informações, acesse a documentação oficial.
+spring.jpa.properties.hibernate.format_sql=true4. Execute a aplicaçãoAbra um terminal na raiz do projeto e execute
+o seguinte comando Maven:Shell Scriptmvn spring-boot:runA aplicação será iniciada e o menu interativo aparecerá no console.API ExternaEste projeto utiliza a API gratuita Gutendex. Para mais informações, acesse a documentação oficial.
 
 # API Externa:
 Este projeto utiliza a API gratuita Gutendex. Para mais informações, acesse a documentação oficial.
@@ -116,7 +118,7 @@ Se você gostaria de contribuir para o projeto, sinta-se a vontade para abrir um
 ## 🌟 Agradecimentos
 Agradecemos aos desenvolvedores da API Gutendex por fornecer uma ferramenta gratuita para pesquisa de livros.
 
-## 📜 Licenca
+## 📜 Licença
 Este projeto está licenciado sob a Licenca MIT. Leia o arquivo LICENSE para mais detalhes.
 
 ## 📞 Contato
