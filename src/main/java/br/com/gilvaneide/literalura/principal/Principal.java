@@ -123,7 +123,7 @@ public class Principal {
                 System.out.println("\nNovo livro cadastrado: " + novoLivro);
 
             } else {
-                System.out.println("\n\"Não encontramos este livro. Por favor, verifique a ortografia ou tente um título diferente.\"");
+                System.out.println("\nNão encontramos este livro. Por favor, verifique a ortografia ou tente um título diferente.");
             }
         } catch (Exception e) {
             System.out.println("Ocorreu um erro durante a busca: " + e.getMessage());
