@@ -38,7 +38,12 @@ public class Principal {
         while (opcao != 0) {
             var menu = """
                 
+                *********************************************
+                *          Bem-vindo ao LiterAlura          *
+                *********************************************
+                
                 Escolha uma opção:
+                
                 1 - Buscar livro pelo título
                 2 - Listar livros registrados
                 3 - Listar autores registrados
@@ -67,9 +72,7 @@ public class Principal {
         }
     }
 
-    // O método de busca (escrita) permanece na classe Principal, pois envolve lógica de API
     private void buscarLivroWeb() {
-        // ... seu método buscarLivroWeb() permanece o mesmo ...
         System.out.println("Digite o título do livro que deseja buscar:");
         var nomeLivro = leitura.nextLine();
 
