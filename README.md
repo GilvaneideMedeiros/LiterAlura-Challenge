@@ -7,7 +7,7 @@
 
 ## 📖 Sobre o Projeto
 
-Este desafio foi proposto pela Formação Java e Spring Framework G8 - ONE, parte do Programa ONE, uma iniciativa da Oracle Next Education em parceria com a Alura. O objetivo é construir um catálogo de livros interativo que consome a API pública [Gutendex](https://gutendex.com/) para buscar e armazenar informações sobre livros e autores em um banco de dados local.
+Este desafio foi proposto pela Formação Java e Spring Framework G8 - ONE, parte da especialização back-end do Programa ONE, uma iniciativa da Oracle Next Education em parceria com a Alura. O objetivo é construir um catálogo de livros interativo que consome a API pública [Gutendex](https://gutendex.com/) para buscar e armazenar informações sobre livros e autores em um banco de dados local.
 
 A aplicação permite ao usuário interagir através de um menu, realizando buscas, listando dados já registrados e consultando informações específicas, como autores vivos em um determinado ano ou livros em um idioma específico.
 
